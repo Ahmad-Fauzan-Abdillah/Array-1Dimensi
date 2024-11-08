@@ -1,0 +1,127 @@
+package tugasprogram;
+
+import java.util.Scanner;
+
+/**
+ * @fauzan
+ */
+public class Tugas7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        java.lang.String brg[] = new java.lang.String[5];
+        int data[][] = new int[5][3];
+        int pilih = 0, baris = 0, kolom, grandtotal = 0;
+        
+        do{
+            System.out.println("\n==========================================================");
+            System.out.println("MINI BAKERY ");
+            System.out.println("==========================================================");
+            System.out.println("(1) Brownies Keju\n(2) Banana Cake\n(3) Japanese Cheese Cake\n(4) Butter Croisant");
+            System.out.println("(5) Selesai");
+            System.out.print("Pilih: ");
+            pilih=sc.nextInt();
+            switch(pilih){
+                case 1:
+                    System.out.println("1. Brwonies Keju  Rp 98.000,-");
+                    if (baris<5){
+                        brg[baris] = "Brownies Keju";
+                        data[baris][0] = 98000;
+                        System.out.print("Jumlah: ");
+                        data[baris][1] = sc.nextInt();
+                        data[baris][2] = data [baris][0]*data [baris][1];
+                        grandtotal+= data[baris][2];
+                        //tampilkan daftar belanja
+                        System.out.println("\nDaftar Belanja");
+                        for (int i = 0; i <= baris; i++) {
+                            System.out.print((i+1) + " ");
+                            System.out.print(brg[i] + " ");
+                            System.out.print(data[i][0] + " ");
+                            System.out.print(data[i][1] + " ");
+                            System.out.println(data[i][2] + " ");
+                        }
+                        baris++;
+                    }else 
+                        System.out.println("Keranjang Penuh");
+                    break;
+                    
+                case 2:
+                    System.out.println("2.Banana Cake  Rp 68.000,-");
+                    if (baris<5){
+                        brg[baris] = "Banana Cake";
+                        data[baris][0] = 68000;
+                        System.out.print("Jumlah: ");
+                        data[baris][1] = sc.nextInt();
+                        data[baris][2] = data [baris][0]*data [baris][1]; 
+                        grandtotal+= data[baris][2];
+                        //tampilkan daftar belanja
+                        System.out.println("\nDaftar Belanja");
+                        for (int i = 0; i <= baris; i++) {
+                            System.out.print((i+1) + " ");
+                            System.out.print(brg[i] + " ");
+                            System.out.print(data[i][0] + " ");
+                            System.out.print(data[i][1] + " ");
+                            System.out.println(data[i][2] + " "); 
+                        }
+                        baris++;
+                    }else 
+                        System.out.println("Keranjang Penuh");
+                    break;
+                    
+                case 3:
+                    System.out.println("3. Japanese Cheese Cake  Rp 47.000,-");
+                    if (baris<5){
+                        brg[baris] = "Japanese Cheese Cake";
+                        data[baris][0] = 47000;
+                        System.out.print("Jumlah:");
+                        data[baris][1] = sc.nextInt();
+                        data[baris][2] = data [baris][0]*data [baris][1]; 
+                        grandtotal+= data[baris][2];
+                        //tampilkan daftar belanja 
+                        System.out.println("\nDaftar Belanja");
+                        for (int i = 0; i <= baris; i++) {
+                            System.out.print((i+1) + " ");
+                            System.out.print(brg[i] + " ");
+                            System.out.print(data[i][0] + " ");
+                            System.out.print(data[i][1] + " ");
+                            System.out.println(data[i][2] + " ");
+                        }
+                        baris++;
+                    }else 
+                        System.out.println("Keranjang Penuh");
+                    break;
+                    
+                case 4:
+                    System.out.println("3. Butter Croisant  Rp 18.000,-");
+                    if (baris<5){
+                        brg[baris] = "Butter Croisant";
+                        data[baris][0] = 18000;
+                        System.out.print("Jumlah:");
+                        data[baris][1] = sc.nextInt();
+                        data[baris][2] = data [baris][0]*data [baris][1]; 
+                        grandtotal+= data[baris][2];
+                        //tampilkan daftar belanja
+                        System.out.println("\nDaftar Belanja");
+                        for (int i = 0; i <= baris; i++) {
+                            System.out.print((i+1) + " ");
+                            System.out.print(brg[i] + " ");
+                            System.out.print(data[i][0] + " ");
+                            System.out.print(data[i][1] + " ");
+                            System.out.println(data[i][2] + " ");
+                        }
+                        baris++;
+                    }else 
+                        System.out.println("Keranjang Penuh");
+                    break;    
+                    
+                case 5:
+                    System.out.println("\n==========================================================");     
+                    System.out.println("Grad Total = "+grandtotal);
+                    System.out.println("==========================================================");     
+                    System.out.println("Terima Kasih...");
+             
+                
+            }
+        }while(pilih!=5);
+    }
+}
